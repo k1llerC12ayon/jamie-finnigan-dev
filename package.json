@@ -4,8 +4,8 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development",
-    "start": "webpack serve --mode development",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jamie Finnigan",
@@ -17,10 +17,13 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.36.0",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
     "react": "^17.0.2",
